@@ -1,0 +1,14 @@
+{
+  "nodes": [
+    {"name": "spine1", "role": "spine", "asn": 65000, "bgp_peers": ["leaf1", "leaf2"]},
+    {"name": "spine2", "role": "spine", "asn": 65000, "bgp_peers": ["leaf1", "leaf2"]},
+    {"name": "leaf1", "role": "leaf", "asn": 65101, "bgp_peers": ["spine1", "spine2"]},
+    {"name": "leaf2", "role": "leaf", "asn": 65102, "bgp_peers": ["spine1", "spine2"]}
+  ],
+  "links": [
+    {"a": "spine1", "b": "leaf1", "subnet": "10.0.0.0/31"},
+    {"a": "spine2", "b": "leaf1", "subnet": "10.0.0.2/31"},
+    {"a": "spine1", "b": "leaf2", "subnet": "10.0.0.4/31"},
+    {"a": "spine2", "b": "leaf2", "subnet": "10.0.0.6/31"}
+  ]
+}

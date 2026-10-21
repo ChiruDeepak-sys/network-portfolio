@@ -1,0 +1,14 @@
+{
+  "interfaces": {
+    "Ethernet1": "up",
+    "Ethernet2": "down"
+  },
+  "bgp_neighbors": {
+    "192.0.2.1": "Established",
+    "192.0.2.2": "Active"
+  },
+  "counters": {
+    "Ethernet1": {"crc": 0, "fec": 4},
+    "Ethernet2": {"crc": 5, "fec": 0}
+  }
+}
